@@ -56,10 +56,13 @@ class p1 {
             e.printStackTrace();
         }
         sorted_map.putAll(map);
+        Integer count=1;
         for(Map.Entry<String,Integer> entry : sorted_map.entrySet()){
             //System.out.println(entry.getKey()+" " +Arrays.asList(stop_words).contains(entry.getKey()));
-            if(!stop_words.contains(entry.getKey()))
-                System.out.println(entry.getKey()+ " => " + entry.getValue());
+            if(!stop_words.contains(entry.getKey())&&count<25){
+                System.out.println(entry.getKey()+ "  -  " + entry.getValue());
+                count++;
+            }
         }
     }
 }
